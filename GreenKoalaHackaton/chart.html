@@ -1,0 +1,133 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Green Koala</title>
+        <link rel="stylesheet" href="css/grafo.css">
+         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYZx2lofAGH_85_tR7AFyYYkL63AGIjGg&signed_in=false"></script>
+        <script src="js/jquery-3.1.1.min.js"></script>
+        <!-- Compiled and minified JavaScript -->
+        <script src="js/materialize.min.js"></script>
+        
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+            
+        <!-- Map Icons -->
+	    <!--<link rel="stylesheet" type="text/css" href="icons_maps/css/map-icons.css">
+	    <script type="text/javascript" src="icons_maps/js/map-icons.js"></script>-->
+        
+        <script src="js/firebase.js"></script>
+
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+
+        
+        <script>
+            // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyBYZx2lofAGH_85_tR7AFyYYkL63AGIjGg",
+                authDomain: "greenkoala-c4317.firebaseapp.com",
+                databaseURL: "https://greenkoala-c4317.firebaseio.com",
+                storageBucket: "greenkoala-c4317.appspot.com",
+                messagingSenderId: "793257289538"
+            };
+            firebase.initializeApp(config);
+        </script> 
+        <script src="js/firebaseData.js"></script>
+
+    </head>
+        <!--<div class="pointer">
+            <img id="imagePointer" src="img/pointerTransform.png" alt="image">
+        </div>-->
+    <body >
+        <!-- NAVBAR -->
+         <nav class="teal">
+             <div class="pointer">
+                <img id="imagePointer" src="koala.svg" alt="image">
+            </div>
+            <span class="menu-title">Green Koala</span>
+             <ul id="dropdown1" class="teal dropdown-content">
+                <li><a style="color:white;" href="#!">Editar</a></li>
+                <li class="divider"></li>
+                <li><a style="color:white;" href="#!">Sair</a></li>
+            </ul>
+            <ul class="teal right hide-on-med-and-down">
+                <li><a href="index.html">Principal</a></li>
+                <li><a href="tables.html">Tabelas</a></li>
+                <li><a href="chart.html">Graficos</a></li>
+                <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Perfil<i class="material-icons right">arrow_drop_down</i></a></li>
+            </ul>
+            <!--<ul id="slide-out" class="side-nav fixed">
+                <li class="bold"><a href="#!" class="waves-effect waves-teal">First Sidebar Link</a></li>
+                <li class="bold"><a href="#!" class="">Second Sidebar Link</a></li>
+                <li class="no-padding">
+                    <ul class="collapsible collapsible-accordion">
+                    <li>
+                        <a class="collapsible-header waves-effect waves-teal">Dropdown<i class="mdi-navigation-arrow-drop-down"></i></a>
+                        <div class="collapsible-body">
+                        <ul>
+                            <li><a href="#!">Principal</a></li>
+                            <li><a href="#!">Tabelas</a></li>
+                            <li><a href="#!">Graficos</a></li>
+                        </ul>
+                        </div>
+                    </li>
+                    </ul>
+                </li>
+                </ul>-->
+                <li><a href="#!" data-activates="slide-out" class="button-collapse"><i class="material-icons">reorder</i></a></li>
+            </nav>
+        <!-- /NAVBAR -->
+
+
+        <section >
+
+            <div style="border-top-left-radius: 5%;border-top-right-radius: 5%;" class="row graphics container">
+                <div class="col s6 m6 l6">
+                    <div class="input-field col s12">
+                        <select id="changeTerminal">
+                            <option  selected value="0">Terminal 1</option>
+                            <option value="1">Terminal 2</option>
+                            <option value="2">Terminal 3</option>
+                            <option value="3">Terminal 4</option>
+                            <option value="4">Terminal 5</option>
+                            <option value="5">Terminal 6</option>
+                        </select>
+                        <label>Selecione o terminal</label>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: -20px!important;border-bottom-left-radius: 5%;border-bottom-right-radius: 5%;" class="row graphics container">
+                <div class="h1">Informações úteis</div>
+                <div class="h4 col s12 m12 l12 l6">
+                    Ventos acima de 10 Km/h e temperaturas acima de 27ºC podem ocasionar o efeito da deriva.
+                </div>
+                <div  class="col s12 m12 l6" style="margin-bottom: 10px;">
+                    <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+                </div>
+                <div class="col s12 m12 l6" style="margin-bottom: 10px;">
+                    <div id="containerBubble" style="min-width: 310px; max-width: 600px; height: 400px; margin: 0 auto;"></div>
+                </div>
+            </div>
+        </section>
+        
+        
+        <footer class="page-footer">
+          <div class="footer-copyright">
+            <div class="container">
+            © 2016 Copyright Green Koala
+            <a class="grey-text text-lighten-4 right" href="#!">Green Koala</a>
+            </div>
+          </div>
+        </footer>
+
+        <!--JS - SCRIPT-->
+        <script src="js/home.js"></script>
+        <script src="js/grafo.js"></script>
+        <script src="js/tables.js"></script>
+        <script src="js/chart.js"></script>
+    </body>
+</html>
