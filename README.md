@@ -1,6 +1,6 @@
 # Green-Koala
 
-Desenvolvendo soluções na área de agronômia.
+Desenvolvendo soluções na área de agronomia.
 
 Atualmente trabalhamos com um sistema de monitoramento de dados climáticos para diversos fins.
 
